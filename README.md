@@ -8,7 +8,7 @@ This package will load these files automatically and print all of your routes
 ### How to install?
 Add to your composer.json
 ```
-composer require lucasruroken/routesfolder 0.1
+composer require lucasruroken/routesfolder ~0.1
 ```
 Add the following provider to your config/app.php
 ```
