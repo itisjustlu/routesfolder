@@ -1,0 +1,18 @@
+{
+  "name": "lucasruroken/routesfolder",
+  "description": "A simple package to organize your routes",
+  "license": "BSD",
+  "authors": [
+    {
+      "name": "Lucas Juarez",
+      "email": "lucasjavierjuarez@hotmail.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "LucasRuroken\\RoutesFolder\\": "src/"
+    }
+  }
+}
