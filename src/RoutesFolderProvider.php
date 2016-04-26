@@ -5,14 +5,14 @@ namespace LucasRuroken\RoutesFolder;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
-class RoutesFolderProvider extends ServiceProvider{
+class RoutesFolderProvider extends ServiceProvider {
 
     /**
      * Boot method
      * 
      * @return void
      */
-    public function boot(Router $router){
+    public function boot(Router $router) {
 
         require __DIR__.'/Routes.php';
     }
@@ -24,7 +24,7 @@ class RoutesFolderProvider extends ServiceProvider{
      * 
      * @return false
      */
-    public function register(){
+    public function register() {
         return false;
     }
 
