@@ -8,33 +8,33 @@ This package will load these files automatically and print all of your routes
 ### How to install?
 Add to your composer.json
 ```
-composer require lucasruroken/routesfolder ~0.1
+composer require lucasruroken/routesfolder ~1.0
 ```
 Add the following provider to your config/app.php
 ```
 LucasRuroken\RoutesFolder\RoutesFolderProvider::class
 ```
 ###How to use?
-You need to create a Routes directory in your app folder.
+You need to create a Routes directory in your app/Http folder.
 Then you can create all the files you want to organize your routes.
 
 Example:
 
-app/Routes/UserRoute.php
+app/Http/Routes/UserRoutes.php
 ```
 <?php
 
-namespace App\Routes;
+namespace App\Http\Routes;
 
 use LucasRuroken\RoutesFolder\RoutesFolderInterface;
 
-class UserRoute implements RoutesFolderInterface{
+class UserRoutes implements RoutesFolderInterface{
 
-    static function load(){
+    public function routes(){
 
         \Route::get('/user', function(){
 
-            echo "User section";
+            print('User Route');
         });
     }
 }

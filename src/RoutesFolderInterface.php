@@ -9,5 +9,5 @@ interface RoutesFolderInterface{
      *
      * @return void
      */
-    static function load();
+    public function routes();
 }

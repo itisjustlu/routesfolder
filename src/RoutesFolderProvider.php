@@ -27,5 +27,4 @@ class RoutesFolderProvider extends ServiceProvider {
     public function register() {
         return false;
     }
-
 }

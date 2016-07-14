@@ -1,6 +1,6 @@
 <?php
 
-$routes_dir = app_path().'/Routes';
+$routes_dir = app_path().'/Http/Routes';
 $classes = [];
 
 if(file_exists($routes_dir)){
@@ -11,12 +11,13 @@ if(file_exists($routes_dir)){
 
         if(!$fileInfo->isDot() && $fileInfo->getExtension() == 'php'){
 
-            $classes[] = 'App\\Routes\\'. $fileInfo->getBasename('.php');
+            $classes[] = 'App\\Http\\Routes\\'. $fileInfo->getBasename('.php');
         }
     }
 }
 
 foreach($classes AS $class){
-    
-    $class::load();
+
+    $route = new $class();
+    $route->routes();
 }
